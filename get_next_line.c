@@ -6,7 +6,7 @@
 /*   By: vaunevik <vaunevik@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 08:26:07 by vaunevik          #+#    #+#             */
-/*   Updated: 2024/03/02 11:01:37 by vaunevik         ###   ########.fr       */
+/*   Updated: 2024/03/02 13:35:28 by vaunevik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -64,7 +64,7 @@ t_list	*read_to_node(int fd, int *read_count)
 }
 
 void	create_list(t_list **list, int fd)
-{	
+{
 	t_list	*node;
 	t_list	*head;
 	int		read_count;

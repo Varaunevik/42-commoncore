@@ -6,7 +6,7 @@
 /*   By: vaunevik <vaunevik@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 08:26:33 by vaunevik          #+#    #+#             */
-/*   Updated: 2024/03/02 09:38:34 by vaunevik         ###   ########.fr       */
+/*   Updated: 2024/03/02 13:38:46 by vaunevik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -49,7 +49,7 @@ void	create_line(t_list **list, char **line, int length)
 	t_list	*tmp;
 
 	tmp = *list;
-	if (tmp  == NULL)
+	if (tmp == NULL)
 		return ;
 	while (tmp)
 	{
@@ -74,8 +74,8 @@ void	create_line(t_list **list, char **line, int length)
 
 void	pass_over_node(t_list *list, t_list **pass_over)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;

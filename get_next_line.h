@@ -6,7 +6,7 @@
 /*   By: vaunevik <vaunevik@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 08:27:01 by vaunevik          #+#    #+#             */
-/*   Updated: 2024/02/29 14:32:31 by vaunevik         ###   ########.fr       */
+/*   Updated: 2024/03/02 13:38:58 by vaunevik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef GET_NEXT_LINE_H

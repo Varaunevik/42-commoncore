@@ -6,7 +6,7 @@
 /*   By: vaunevik <vaunevik@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 11:16:00 by vaunevik          #+#    #+#             */
-/*   Updated: 2024/03/02 10:51:19 by vaunevik         ###   ########.fr       */
+/*   Updated: 2024/03/02 13:37:05 by vaunevik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line_bonus.h"
@@ -14,7 +14,7 @@
 char	*get_next_line(int fd)
 {
 	char			*line;
-	static	t_list	*head[1048];
+	static t_list	*head[1048];
 	t_list			*list;
 
 	line = NULL;
@@ -42,7 +42,7 @@ char	*get_next_line(int fd)
 
 t_list	*read_to_node(int fd, int *read_count)
 {
-	t_list *node;
+	t_list	*node;
 
 	node = malloc(sizeof(t_list));
 	if (!node)
@@ -51,8 +51,8 @@ t_list	*read_to_node(int fd, int *read_count)
 	if (*read_count < 0)
 	{
 		free(node);
-		return(NULL);
-	} 
+		return (NULL);
+	}
 	node->content[*read_count] = '\0';
 	node->next = NULL;
 	return (node);

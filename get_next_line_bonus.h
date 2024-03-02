@@ -6,14 +6,14 @@
 /*   By: vaunevik <vaunevik@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 11:56:06 by vaunevik          #+#    #+#             */
-/*   Updated: 2024/03/02 09:15:10 by vaunevik         ###   ########.fr       */
+/*   Updated: 2024/03/02 13:40:16 by vaunevik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
-#	define BUFFER_SIZE 10
+#  define BUFFER_SIZE 10
 # endif
 
 # include <unistd.h>
@@ -23,7 +23,7 @@
 
 typedef struct s_list
 {
-	char	content[BUFFER_SIZE + 1];
+	char			content[BUFFER_SIZE + 1];
 	struct s_list	*next;
 }	t_list;
 

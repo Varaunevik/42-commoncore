@@ -6,7 +6,7 @@
 /*   By: vaunevik <vaunevik@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 13:23:54 by vaunevik          #+#    #+#             */
-/*   Updated: 2024/03/02 10:50:59 by vaunevik         ###   ########.fr       */
+/*   Updated: 2024/03/02 13:38:14 by vaunevik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line_bonus.h"
@@ -73,8 +73,8 @@ void	create_line(t_list **list, char **line, int i)
 
 void	pass_over_node(t_list *list, t_list **pass_over)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -82,7 +82,7 @@ void	pass_over_node(t_list *list, t_list **pass_over)
 		i++;
 	if (list->content[i] == '\n')
 		i++;
-	while (list->content[i]) 
+	while (list->content[i])
 	{
 		(*pass_over)->content[j] = list->content[i];
 		i++;
@@ -101,4 +101,3 @@ int	check_line(char **line, t_list *list)
 	}
 	return (0);
 }
-
