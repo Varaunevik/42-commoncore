@@ -6,7 +6,7 @@
 /*   By: vaunevik <vaunevik@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 11:16:00 by vaunevik          #+#    #+#             */
-/*   Updated: 2024/03/02 13:37:05 by vaunevik         ###   ########.fr       */
+/*   Updated: 2024/03/04 08:57:42 by vaunevik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line_bonus.h"
@@ -14,17 +14,17 @@
 char	*get_next_line(int fd)
 {
 	char			*line;
-	static t_list	*head[1048];
+	static t_list	*head[1024];
 	t_list			*list;
 
 	line = NULL;
-	list = head[fd];
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 1048 || read(fd, 0, 0) < 0)
-	{
-		free_list(list);
-		if (fd < 1048)
-			head[fd] = NULL;
+	if (fd < 0 || fd > 1024)
 		return (NULL);
+	list = head[fd];
+	if (BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
+	{
+		head[fd] = NULL;
+		return (free_list(list), NULL);
 	}
 	create_list(&list, fd);
 	if (!list)
